@@ -31,5 +31,6 @@ The code was prepared in `RStudio` using `R` version `3.6.3` in a Windows archit
 * `dplyr 1.0.7` for data manipulation in the simulated data generation
 * `ggplot2 3.3.5` to plot the simulation study results (Figure 1 in the article)
 * `ggridges 2.3` to plot the simulation study results (Figure 1 in the article)
+* `gridExtra 2.3` to plot the simulation study results (Figure 1 in the article)
 * `MASS 7.3-55` to simulate correlated covariates in the data-generating process for the simulation study, drawing from a multivariate normal distribution 
 * `parallel 3.6.3` to detect the number of CPU cores
