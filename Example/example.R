@@ -13,7 +13,7 @@ index.IPD <- read.csv("index_IPD.csv") # load index trial patient-level data
 comp.ALD <- read.csv("comp_ALD.csv") # load competitor study aggregate-level data
 
 # options
-resamples <- 5000 # number of resamples in non-parametric bootstrap
+resamples <- 2000 # number of resamples in non-parametric bootstrap
 truncation <- FALSE # whether there is weight truncation
 trunc.cutoff <- 0.95 # weights above this percentile are truncated if truncation==TRUE
 
@@ -51,8 +51,8 @@ maic.boot <- function(data, indices) {
     w.cutoff <- quantile(hat.w, trunc.cutoff)
     hat.w <- ifelse(hat.w > w.cutoff, w.cutoff, hat.w)
   }
-  # fit weighted logistic regression model
-  outcome.fit <- glm(y~trt, weights=hat.w, data=dat)
+  # fit weighted linear regression model
+  outcome.fit <- lm(y~trt, weights=hat.w, data=dat)
   # fitted treatment coefficient is marginal effect for A vs. C
   hat.Delta.10 <- coef(outcome.fit)["trt"]
   return(hat.Delta.10)
@@ -82,7 +82,7 @@ index.IPD <- read.csv("index_IPD.csv") # load index trial patient-level data
 comp.ALD <- read.csv("comp_ALD.csv") # load competitor study aggregate-level data
 
 # options
-resamples <- 5000 # number of resamples in non-parametric bootstrap
+resamples <- 2000 # number of resamples in non-parametric bootstrap
 truncation <- FALSE # whether there is weight truncation
 trunc.cutoff <- 0.95 # weights above this percentile are truncated if truncation==TRUE
 
@@ -129,8 +129,8 @@ maic2s.boot <- function(data, indices) {
     omega.cutoff <- quantile(hat.omega, trunc.cutoff)
     hat.omega <- ifelse(hat.omega > omega.cutoff, omega.cutoff, hat.omega)
   }    
-  # fit weighted logistic regression model
-  outcome.fit <- glm(y~trt, weights=hat.omega, data=dat)
+  # fit weighted linear regression model
+  outcome.fit <- lm(y~trt, weights=hat.omega, data=dat)
   # fitted treatment coefficient is marginal effect for A vs. C
   hat.Delta.10 <- coef(outcome.fit)["trt"]
   return(hat.Delta.10)
