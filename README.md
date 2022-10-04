@@ -6,7 +6,7 @@
 
 ### *2022*
 
-This repository contains the R code used for my paper "Two-stage matching-adjusted indirect comparison". 
+This repository contains the R code used for my paper [Two-stage matching-adjusted indirect comparison][1]. 
 
 ## Utilizing the Scripts
 
@@ -34,3 +34,5 @@ The code was prepared in `RStudio` using `R` version `3.6.3` in a Windows archit
 * `gridExtra 2.3` to plot the simulation study results (Figure 1 in the article)
 * `MASS 7.3-55` to simulate correlated covariates in the data-generating process for the simulation study, drawing from a multivariate normal distribution 
 * `parallel 3.6.3` to detect the number of CPU cores
+
+[1]: https://doi.org/10.1186/s12874-022-01692-9
