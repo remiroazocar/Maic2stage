@@ -24,7 +24,7 @@ The `./Example` subdirectory features example `R` code implementing matching-adj
 
 In the simulation study, the `doSNOW` package is used to parallelize the performance of the methods, distributing the tasks to different cores of the computer. 
 
-The code was prepared in `RStudio` using `R` version `3.6.3` in a Windows architecture, with a 64-bit operating system. The following packages and versions were used:
+The code was prepared in `RStudio` using `R` version `4.1.1` in a Windows architecture, with a 64-bit operating system. The following packages and versions were used:
 
 * `boot 1.3-28` required for use of the non-parametric bootstrap in all methods 
 * `doSNOW 1.0.19` used in combination with `foreach()` to start up local clusters that distribute parallel tasks to different cores
