@@ -33,6 +33,6 @@ The code was prepared in `RStudio` using `R` version `4.1.1` in a Windows archit
 * `ggridges 0.5.3` to plot the simulation study results (Figure 1 in the article)
 * `gridExtra 2.3` to plot the simulation study results (Figure 1 in the article)
 * `MASS 7.3-55` to simulate correlated covariates in the data-generating process for the simulation study, drawing from a multivariate normal distribution 
-* `parallel 3.6.3` to detect the number of CPU cores
+* `parallel 4.1.1` to detect the number of CPU cores
 
 [1]: https://doi.org/10.1186/s12874-022-01692-9
